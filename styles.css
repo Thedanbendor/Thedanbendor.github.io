@@ -149,13 +149,34 @@ img { max-width: 100%; display: block; }
   padding: 0 2px;
 }
 .hero .actions { display: flex; gap: 12px; flex-wrap: wrap; }
-.hero .photo { align-self: end; height: 100%; display: flex; align-items: flex-end; justify-content: center; }
-.hero .photo img {
-  width: 100%;
-  max-width: 560px;
+.hero .photo {
+  position: relative;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 24px;
+}
+/* Soft light halo behind the round photo */
+.hero .photo::before {
+  content: "";
+  position: absolute;
+  width: min(94%, 540px);
   aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,.5) 0%, rgba(255,255,255,.18) 45%, rgba(255,255,255,0) 70%);
+}
+.hero .photo img {
+  position: relative;
+  width: min(100%, 460px);
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 30%;
+  /* Feather the edge so the photo melts into the purple */
+  -webkit-mask-image: radial-gradient(circle at center, #000 62%, rgba(0,0,0,0) 71%);
+  mask-image: radial-gradient(circle at center, #000 62%, rgba(0,0,0,0) 71%);
   transform: translateY(12px);
   opacity: 0;
   transition: opacity 1s ease, transform 1.2s cubic-bezier(.2,.7,.2,1);
@@ -363,7 +384,8 @@ img { max-width: 100%; display: block; }
   .section { padding: 60px 0; }
   .hero .inner { grid-template-columns: 1fr; min-height: 0; }
   .hero .intro { padding: 48px 16px 8px; }
-  .hero .photo img { max-width: 420px; }
+  .hero .photo { padding: 16px 16px 48px; }
+  .hero .photo img { width: min(100%, 320px); }
   .stats, .who { grid-template-columns: 1fr; }
   .timeline li { grid-template-columns: 1fr; gap: 6px; }
 }
