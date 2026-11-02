@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf7ff; --lilac: #c6abe2; --lilac-deep: #a888cf;
+    --ink: #1e1533; --orange: #ff6a2b; --yellow: #ffcf33; --green: #35c56b;
+    --blue: #2c49d6; --red: #ec3346; --pink: #f6c4d6;
+    --mono: "Space Mono", monospace; --display: "Space Grotesk", sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 1200px; overflow: hidden; background: var(--lilac); }
+  .card {
+    position: relative; width: 1200px; height: 1200px; padding: 92px 88px 80px;
+    background: var(--lilac); color: var(--ink); font-family: var(--display); overflow: hidden;
+  }
+
+  /* Confetti, as in the site hero */
+  .confetti i { position: absolute; width: 42px; height: 22px; border-radius: 4px; }
+
+  /* Giant question mark */
+  .qmark {
+    position: absolute; right: -40px; top: 250px;
+    font-size: 820px; line-height: 1; font-weight: 700; color: var(--orange);
+    transform: rotate(14deg); letter-spacing: -.05em;
+  }
+
+  .kicker {
+    position: relative; display: inline-block; background: var(--ink); color: #fff;
+    font-family: var(--mono); font-weight: 700; font-size: 26px; letter-spacing: .14em;
+    text-transform: uppercase; padding: 10px 20px;
+  }
+  h1 {
+    position: relative; margin-top: 40px; font-size: 150px; line-height: .92;
+    font-weight: 700; letter-spacing: -.045em;
+  }
+  h1 .small { display: block; margin-top: 26px; font-size: 92px; letter-spacing: -.035em; line-height: 1; }
+  mark {
+    background: linear-gradient(transparent 58%, var(--yellow) 58%);
+    color: inherit; padding: 0 6px;
+  }
+
+  /* Hired sticker */
+  .sticker {
+    position: absolute; left: 905px; top: 225px; transform: rotate(10deg);
+    background: var(--green); color: var(--ink); border: 4px solid var(--ink);
+    border-radius: 999px; padding: 14px 34px;
+    font-family: var(--mono); font-weight: 700; font-size: 34px; letter-spacing: .12em;
+    box-shadow: 8px 8px 0 var(--ink);
+  }
+
+  .lenses { position: absolute; left: 88px; bottom: 120px; display: flex; flex-direction: column; gap: 22px; align-items: flex-start; }
+  .lenses .lead { font-family: var(--mono); font-weight: 700; font-size: 26px; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 4px; }
+  .pill {
+    border: 4px solid var(--ink); border-radius: 999px; padding: 14px 34px;
+    font-family: var(--display); font-weight: 700; font-size: 44px; letter-spacing: -.01em;
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+  .p1 { background: var(--ink); color: #fff; transform: rotate(-2deg); }
+  .p2 { background: #fff; transform: rotate(1.5deg); margin-left: 40px; }
+  .p3 { background: var(--yellow); transform: rotate(-1deg); margin-left: 16px; }
+
+  .foot {
+    position: absolute; left: 88px; right: 88px; bottom: 72px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .brand { display: inline-flex; align-items: center; gap: 16px; font-weight: 700; font-size: 34px; }
+  .brand::before { content: ""; width: 24px; height: 24px; background: var(--orange); transform: rotate(18deg); }
+  .foot span { font-family: var(--mono); font-weight: 700; font-size: 22px; letter-spacing: .12em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="confetti">
+      <i style="left:72px; top:46px; background:var(--yellow); transform:rotate(24deg)"></i>
+      <i style="left:520px; top:60px; background:var(--blue); transform:rotate(-30deg)"></i>
+      <i style="left:1080px; top:130px; background:var(--red); transform:rotate(40deg)"></i>
+      <i style="left:880px; top:40px; background:var(--pink); transform:rotate(10deg)"></i>
+      <i style="left:1110px; top:620px; background:var(--yellow); transform:rotate(-20deg)"></i>
+      <i style="left:640px; top:700px; background:var(--pink); transform:rotate(55deg)"></i>
+      <i style="left:520px; top:1010px; background:var(--blue); transform:rotate(18deg)"></i>
+      <i style="left:40px; top:600px; background:var(--red); transform:rotate(-40deg)"></i>
+      <i style="left:1060px; top:1000px; background:var(--green); transform:rotate(30deg)"></i>
+    </div>
+
+    <div class="qmark">?</div>
+
+    <div class="kicker">When a hire doesn't work out</div>
+    <div class="sticker">HIRED ✓</div>
+
+    <h1>Wrong hire?<span class="small">Or a role that<br><mark>changed?</mark></span></h1>
+
+    <div class="lenses">
+      <div class="lead">Where do you look?</div>
+      <div class="pill p1">The person</div>
+      <div class="pill p2">The assessment</div>
+      <div class="pill p3">The role</div>
+    </div>
+
+
+  </div>
+</body>
+</html>

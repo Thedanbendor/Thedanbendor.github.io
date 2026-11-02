@@ -243,7 +243,7 @@ img { max-width: 100%; display: block; }
 .tier.featured { border-color: var(--ink); box-shadow: 8px 8px 0 var(--yellow); }
 .tier .badge {
   position: absolute;
-  top: -13px; left: 24px;
+  top: -13px; inset-inline-start: 24px;
   background: var(--orange);
   color: #fff;
   padding: 3px 10px;
@@ -261,10 +261,10 @@ img { max-width: 100%; display: block; }
 .tier .price small { font-size: 14px; font-weight: 500; color: var(--ink-soft); letter-spacing: 0; }
 .tier .per { color: var(--ink-soft); font-size: 13px; margin: 6px 0 20px; }
 .tier ul { list-style: none; padding: 0; margin: 0 0 26px; font-size: 14px; flex: 1; }
-.tier li { padding: 7px 0 7px 22px; position: relative; border-top: 1px dashed var(--rule); }
+.tier li { padding-block: 7px; padding-inline: 22px 0; position: relative; border-top: 1px dashed var(--rule); }
 .tier li::before {
   content: "";
-  position: absolute; left: 0; top: 15px;
+  position: absolute; inset-inline-start: 0; top: 15px;
   width: 10px; height: 6px; border-radius: 1px;
   background: var(--c, var(--green));
   transform: rotate(-20deg);
@@ -445,3 +445,31 @@ img { max-width: 100%; display: block; }
   .article { padding: 44px 0 60px; }
   .nav { gap: 10px; }
 }
+
+/* ---------- Language switch ---------- */
+.nav a.lang {
+  border: 1.5px solid var(--rule);
+  border-radius: 999px;
+  padding: 2px 9px;
+  font-size: 12px;
+}
+.nav a.lang:hover { border-color: var(--ink); }
+
+/* ---------- Hebrew site (he/) ---------- */
+html[lang="he"] body { font-family: "Rubik", system-ui, sans-serif; font-size: 16px; line-height: 1.8; }
+html[lang="he"] .label { letter-spacing: 0.02em; }
+html[lang="he"] .hero h1,
+html[lang="he"] .section-title,
+html[lang="he"] .page-head h1,
+html[lang="he"] .focus h3,
+html[lang="he"] .timeline h3,
+html[lang="he"] .tier h3,
+html[lang="he"] .who h3,
+html[lang="he"] .post-card h2,
+html[lang="he"] .article h1,
+html[lang="he"] .brand { font-family: "Rubik", system-ui, sans-serif; letter-spacing: -0.01em; }
+html[lang="he"] .hero h1 { line-height: 1.05; }
+html[lang="he"] .btn { font-family: "Rubik", system-ui, sans-serif; letter-spacing: 0.02em; font-size: 13px; }
+html[lang="he"] .article .prose blockquote { border-left: 0; border-right: 4px solid var(--orange); padding: 4px 18px 4px 0; font-family: "Rubik", system-ui, sans-serif; }
+html[lang="he"] .num, html[lang="he"] .price, html[lang="he"] .from { direction: ltr; unicode-bidi: isolate; }
+html[lang="he"] .tier .price, html[lang="he"] .from { text-align: right; }
