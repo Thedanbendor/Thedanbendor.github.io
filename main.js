@@ -52,3 +52,17 @@ const io = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.15 });
 document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+// Microsoft Clarity: record WhatsApp booking clicks as named events per package
+const packageNames = ["Clarity call", "Career kickstart", "Career shift program"];
+document.addEventListener("click", e => {
+  const link = e.target.closest('a[href*="wa.me/"]');
+  if (!link || typeof window.clarity !== "function") return;
+  const tier = link.closest(".tier");
+  const pkg = tier ? packageNames[[...tier.parentElement.children].indexOf(tier)] || "Other" : "Other";
+  const lang = document.documentElement.lang === "he" ? "HE" : "EN";
+  window.clarity("event", `WhatsApp - ${pkg}`);
+  window.clarity("set", "whatsapp_package", pkg);
+  window.clarity("set", "whatsapp_language", lang);
+  window.clarity("upgrade", "WhatsApp booking click");
+});
