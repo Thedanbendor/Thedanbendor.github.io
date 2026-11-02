@@ -473,3 +473,6 @@ html[lang="he"] .btn { font-family: "Rubik", system-ui, sans-serif; letter-spaci
 html[lang="he"] .article .prose blockquote { border-left: 0; border-right: 4px solid var(--orange); padding: 4px 18px 4px 0; font-family: "Rubik", system-ui, sans-serif; }
 html[lang="he"] .num, html[lang="he"] .price, html[lang="he"] .from { direction: ltr; unicode-bidi: isolate; }
 html[lang="he"] .tier .price, html[lang="he"] .from { text-align: right; }
+
+/* WhatsApp booking buttons */
+.btn .wa { width: 16px; height: 16px; flex: none; }
