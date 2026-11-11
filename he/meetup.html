@@ -69,6 +69,15 @@
     .pills span { background: var(--cream); border: 1px solid var(--line); border-radius: 999px; padding: 6px 16px; font-size: 16px; direction: ltr; }
     .after { margin-top: 18px; color: var(--char-soft); }
 
+    /* about the host */
+    .about { display: grid; grid-template-columns: 200px 1fr; gap: 40px; align-items: start; background: var(--cream); border: 1px solid var(--line); border-radius: 24px; padding: 36px; }
+    .about img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 5px var(--cream), 0 0 0 9px var(--clay); }
+    .about h2 { margin-bottom: 6px; }
+    .about-name { color: var(--clay); font-weight: 700; margin-bottom: 14px; }
+    .about p { margin: 0 0 12px; color: var(--char-soft); }
+    .about .more { color: var(--clay); font-weight: 700; text-decoration: none; }
+    .about .more:hover { text-decoration: underline; }
+
     /* form */
     .reg { display: grid; grid-template-columns: 1fr 1.25fr; gap: 40px; align-items: start; }
     .reg .intro p { color: var(--char-soft); margin: 0 0 12px; }
@@ -102,7 +111,9 @@
 
     @media (max-width: 820px) {
       .hero { padding: 40px 24px; border-radius: 22px; }
-      .grid, .reg { grid-template-columns: 1fr; }
+      .grid, .reg, .about { grid-template-columns: 1fr; }
+      .about { padding: 24px; gap: 20px; }
+      .about img { width: 120px; height: 120px; }
       .reg { gap: 24px; }
       form { padding: 22px; }
       .choices { grid-template-columns: 1fr; }
@@ -130,7 +141,7 @@
       <div class="hero-foot">
         <div class="host">
           <img src="../images/meetup/host.jpg" alt="דן בן דור">
-          <div class="who"><div class="name">Dan Ben Dor</div><div class="role">HR Lead</div></div>
+          <div class="who"><div class="name">Dan Ben Dor</div><div class="role">HR &amp; Talent Lead</div></div>
         </div>
         <a class="btn" href="#register">שמרו לעצמכם מקום</a>
       </div>
@@ -150,6 +161,19 @@
       <p style="margin: 0 0 16px; color: var(--char-soft);">ג׳וניורים ומחליפי קריירה שמכוונים לתפקידי כניסה בהייטק, כמו:</p>
       <div class="pills"><span>Customer Success</span><span>Support</span><span>SDR</span><span>Operations</span><span>Recruiting</span><span>People</span></div>
       <p class="after">ומה אחרי? המשתתפים יוזמנו לקבוצה סגורה ושקטה: מקרים אמיתיים מחדר ההחלטות, דרכים לעקוף את הערימה, והזדמנויות לג׳וניורים שמגיעות אליי מהרשת. הקבוצה שומעת עליהן ראשונה.</p>
+    </section>
+
+    <section>
+      <div class="about">
+        <img src="../images/meetup/host.jpg" alt="דן בן דור">
+        <div>
+          <h2>מי מעביר את המפגש</h2>
+          <div class="about-name"><span>דן בן דור</span> · <span dir="ltr">HR &amp; Talent Lead</span></div>
+          <p>יותר מ-11 שנים אני מגייס ובונה צוותים. ב-2021 נכנסתי להייטק מהמגזר השלישי, בלי "ניסיון רלוונטי", לתפקיד גיוס בסטארטאפ. משם הגעתי ל-Faye כאיש ה-HR הראשון, בניתי את הגיוס הגלובלי מאפס והקמתי אתר חדש בארה״ב. בשנים האחרונות אני מוביל צוות HR בין ישראל לארה״ב.</p>
+          <p>קראתי אלפי קורות חיים וישבתי בהרבה חדרים שבהם מחליטים מי ממשיך לשלב הבא. במפגש הזה אני פותח לכם את הדלת לחדר הזה.</p>
+          <a class="more" href="journey.html">למסע המלא שלי ←</a>
+        </div>
+      </div>
     </section>
 
     <section id="register">
