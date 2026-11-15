@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>שעה בכיסא של המגייס · מפגש זום חינמי</title>
-  <meta name="description" content="מפגש זום חינמי לג׳וניורים ולמחליפי קריירה: איך באמת מחליטים מי ממשיך לשלב הבא. שלישי, 1.12, 17:00.">
+  <title>שעה בכיסא של המגייס · מפגש אונליין חינמי</title>
+  <meta name="description" content="מפגש אונליין חינמי לג׳וניורים ולמחליפי קריירה: איך באמת מחליטים מי ממשיך לשלב הבא. שלישי, 1.12, 17:00.">
   <meta property="og:title" content="רוצים להיכנס להייטק? שבו שעה בכיסא של המגייס">
-  <meta property="og:description" content="מפגש זום חינמי לג׳וניורים ולמחליפי קריירה. שלישי, 1.12, 17:00.">
+  <meta property="og:description" content="מפגש אונליין חינמי לג׳וניורים ולמחליפי קריירה. שלישי, 1.12, 17:00.">
   <meta property="og:image" content="https://danbendor.com/images/meetup/invite.png">
   <link rel="icon" href="../images/meetup/dbd-icon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -77,6 +77,8 @@
     .about p { margin: 0 0 12px; color: var(--char-soft); }
     .about .more { color: var(--clay); font-weight: 700; text-decoration: none; }
     .about .more:hover { text-decoration: underline; }
+    .about.guest { margin-top: 18px; }
+    .hosts { display: flex; flex-wrap: wrap; gap: 22px 36px; }
 
     /* form */
     .reg { display: grid; grid-template-columns: 1fr 1.25fr; gap: 40px; align-items: start; }
@@ -134,14 +136,20 @@
 
   <main class="wrap">
     <div class="hero">
-      <div class="kicker">מפגש זום חינמי לג׳וניורים ולמחליפי קריירה</div>
+      <div class="kicker">מפגש אונליין חינמי לג׳וניורים ולמחליפי קריירה</div>
       <h1>רוצים להיכנס<br>להייטק?</h1>
       <div class="sub">שבו שעה בכיסא של המגייס</div>
-      <div class="when"><span>שלישי, 1.12.2026</span><span class="sep"></span><span><span dir="ltr">17:00–18:00</span> · זום</span></div>
+      <div class="when"><span>שלישי, 1.12.2026</span><span class="sep"></span><span><span dir="ltr">17:00–18:00</span> · Google Meet</span></div>
       <div class="hero-foot">
-        <div class="host">
-          <img src="../images/meetup/host.jpg" alt="דן בן דור">
-          <div class="who"><div class="name">Dan Ben Dor</div><div class="role">HR &amp; Talent Lead</div></div>
+        <div class="hosts">
+          <div class="host">
+            <img src="../images/meetup/host.jpg" alt="דן בן דור">
+            <div class="who"><div class="name">Dan Ben Dor</div><div class="role">HR &amp; Talent Lead</div></div>
+          </div>
+          <div class="host">
+            <img src="../images/meetup/eran.jpg" alt="ערן הלביץ">
+            <div class="who"><div class="name">Eran Helvitz</div><div class="role">Software Engineer</div></div>
+          </div>
         </div>
         <a class="btn" href="#register">שמרו לעצמכם מקום</a>
       </div>
@@ -174,13 +182,21 @@
           <a class="more" href="journey.html">למסע המלא שלי ←</a>
         </div>
       </div>
+      <div class="about guest">
+        <img src="../images/meetup/eran.jpg" alt="ערן הלביץ">
+        <div>
+          <h2>מצטרף למפגש</h2>
+          <div class="about-name"><span>ערן הלביץ</span> · <span dir="ltr">Software Engineer</span></div>
+          <p>ערן נכנס להייטק כג׳וניור בלי ניסיון, ואני גייסתי אותו לסטארטאפ מבטיח. במפגש הוא יספר איך זה קרה מהצד שלו: מה עשה, מה עבד, ומה היה עושה אחרת.</p>
+        </div>
+      </div>
     </section>
 
     <section id="register">
       <div class="reg">
         <div class="intro">
           <h2>שמרו לעצמכם מקום</h2>
-          <p>ההשתתפות חינם. קישור לזום יישלח אליכם במייל ובוואטסאפ לפני המפגש.</p>
+          <p>ההשתתפות חינם. מיד אחרי ההרשמה יגיע אליכם מייל אישור, וקישור לגוגל מיט יישלח במייל יומיים לפני המפגש.</p>
           <p>יש לכם שאלה שתמיד רציתם לשאול מגייס? כתבו אותה בטופס, ואענה על חלק מהשאלות במפגש.</p>
         </div>
 
@@ -208,10 +224,10 @@
 
           <div class="done" id="reg-done" tabindex="-1">
             <h3>נרשמתם, נתראה ב-1.12</h3>
-            <p>קישור לזום יגיע אליכם במייל ובוואטסאפ לפני המפגש.</p>
+            <p>שלחנו לכם מייל אישור. קישור לגוגל מיט יגיע במייל יומיים לפני המפגש.</p>
             <div class="row">
-              <a class="btn" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%D7%A9%D7%A2%D7%94%20%D7%91%D7%9B%D7%99%D7%A1%D7%90%20%D7%A9%D7%9C%20%D7%94%D7%9E%D7%92%D7%99%D7%99%D7%A1&dates=20261201T150000Z/20261201T160000Z&details=%D7%A7%D7%99%D7%A9%D7%95%D7%A8%20%D7%9C%D7%96%D7%95%D7%9D%20%D7%99%D7%99%D7%A9%D7%9C%D7%97%20%D7%91%D7%9E%D7%99%D7%99%D7%9C%20%D7%9C%D7%A4%D7%A0%D7%99%20%D7%94%D7%9E%D7%A4%D7%92%D7%A9.%20https%3A%2F%2Fdanbendor.com%2Fhe%2Fmeetup">הוספה ליומן</a>
-              <a class="btn ghost" target="_blank" rel="noopener" href="https://wa.me/?text=%D7%9E%D7%A4%D7%92%D7%A9%20%D7%96%D7%95%D7%9D%20%D7%97%D7%99%D7%A0%D7%9E%D7%99%20%D7%9C%D7%92%27%D7%95%D7%A0%D7%99%D7%95%D7%A8%D7%99%D7%9D%20%D7%95%D7%9C%D7%9E%D7%97%D7%9C%D7%99%D7%A4%D7%99%20%D7%A7%D7%A8%D7%99%D7%99%D7%A8%D7%94%2C%201.12%20%D7%91-17%3A00%3A%20https%3A%2F%2Fdanbendor.com%2Fhe%2Fmeetup">לשתף עם חבר/ה</a>
+              <a class="btn" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=%D7%A9%D7%A2%D7%94%20%D7%91%D7%9B%D7%99%D7%A1%D7%90%20%D7%A9%D7%9C%20%D7%94%D7%9E%D7%92%D7%99%D7%99%D7%A1&amp;dates=20261201T150000Z/20261201T160000Z&amp;details=%D7%9E%D7%A4%D7%92%D7%A9%20%D7%90%D7%95%D7%A0%D7%9C%D7%99%D7%99%D7%9F%20%D7%9C%D7%92%D7%B3%D7%95%D7%A0%D7%99%D7%95%D7%A8%D7%99%D7%9D%20%D7%95%D7%9C%D7%9E%D7%97%D7%9C%D7%99%D7%A4%D7%99%20%D7%A7%D7%A8%D7%99%D7%99%D7%A8%D7%94.%20%D7%A7%D7%99%D7%A9%D7%95%D7%A8%20%D7%9C%D7%92%D7%95%D7%92%D7%9C%20%D7%9E%D7%99%D7%98%20%D7%99%D7%99%D7%A9%D7%9C%D7%97%20%D7%91%D7%9E%D7%99%D7%99%D7%9C%20%D7%99%D7%95%D7%9E%D7%99%D7%99%D7%9D%20%D7%9C%D7%A4%D7%A0%D7%99%20%D7%94%D7%9E%D7%A4%D7%92%D7%A9.%20https%3A%2F%2Fdanbendor.com%2Fhe%2Fmeetup&amp;location=Google%20Meet">הוספה ליומן</a>
+              <a class="btn ghost" target="_blank" rel="noopener" href="https://wa.me/?text=%D7%9E%D7%A4%D7%92%D7%A9%20%D7%90%D7%95%D7%A0%D7%9C%D7%99%D7%99%D7%9F%20%D7%97%D7%99%D7%A0%D7%9E%D7%99%20%D7%9C%D7%92%27%D7%95%D7%A0%D7%99%D7%95%D7%A8%D7%99%D7%9D%20%D7%95%D7%9C%D7%9E%D7%97%D7%9C%D7%99%D7%A4%D7%99%20%D7%A7%D7%A8%D7%99%D7%99%D7%A8%D7%94%2C%201.12%20%D7%91-17%3A00%3A%20https%3A%2F%2Fdanbendor.com%2Fhe%2Fmeetup">לשתף עם חבר/ה</a>
             </div>
           </div>
         </div>
